@@ -8,7 +8,7 @@ function useClerkAuth() {
   if (!clerkEnabled) {
     return { isSignedIn: false }
   }
-  const { useAuth } = require('@clerk/tanstack-start')
+  const { useAuth } = require('@clerk/tanstack-react-start')
   return useAuth()
 }
 import { Button } from '@/components/ui/button'

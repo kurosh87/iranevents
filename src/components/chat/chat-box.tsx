@@ -8,7 +8,7 @@ function useClerkAuth() {
     return { isSignedIn: false, user: null }
   }
   // Dynamic import to avoid errors when Clerk is not configured
-  const { useAuth, useUser } = require('@clerk/tanstack-start')
+  const { useAuth, useUser } = require('@clerk/tanstack-react-start')
   const { isSignedIn } = useAuth()
   const { user } = useUser()
   return { isSignedIn, user }

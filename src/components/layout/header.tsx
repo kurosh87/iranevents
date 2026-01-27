@@ -4,7 +4,7 @@ import {
   SignedIn,
   SignedOut,
   UserButton,
-} from '@clerk/tanstack-start'
+} from '@clerk/tanstack-react-start'
 import { Button } from '@/components/ui/button'
 import { MapPin, Calendar } from 'lucide-react'
 

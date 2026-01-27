@@ -14,3 +14,4 @@ todos.json
 *.zip
 .claude/cache
 .claude/tsc-cache
+.vercel

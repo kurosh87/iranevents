@@ -35,7 +35,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 52.52, lng: 13.405 },
     timezone: 'Europe/Berlin',
-    posterUrl: '/posters/Berlin.jpeg',
+    posterUrl: '/posters/berlin.jpeg',
     meetupLocation: {
       name: 'Kurfurstendamm / Joachimstaler Str.',
       address: 'Kurfurstendamm / Joachimstaler Str., Berlin',
@@ -62,7 +62,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 41.3851, lng: 2.1734 },
     timezone: 'Europe/Madrid',
-    posterUrl: '/posters/Barcelona.jpeg',
+    posterUrl: '/posters/barcelona.jpeg',
     meetupLocation: {
       name: 'Placa de Catalunya',
       address: 'Placa de Catalunya, 08002 Barcelona',
@@ -76,7 +76,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 41.9028, lng: 12.4964 },
     timezone: 'Europe/Rome',
-    posterUrl: '/posters/Rome.png',
+    posterUrl: '/posters/rome.png',
     meetupLocation: {
       name: 'Piazzale Ugo La Malfa',
       address: 'Piazzale Ugo La Malfa, Roma',
@@ -90,7 +90,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 48.2082, lng: 16.3738 },
     timezone: 'Europe/Vienna',
-    posterUrl: '/posters/Vienna, Austria.jpg',
+    posterUrl: '/posters/vienna-austria.jpg',
     meetupLocation: {
       name: 'Heldenplatz',
       address: 'Heldenplatz, 1010 Wien',
@@ -117,7 +117,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 59.3293, lng: 18.0686 },
     timezone: 'Europe/Stockholm',
-    posterUrl: '/posters/Stockholm.jpeg',
+    posterUrl: '/posters/stockholm.jpeg',
     meetupLocation: {
       name: 'Norra Bantorget',
       address: 'Norra Bantorget, Stockholm',
@@ -144,7 +144,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 50.8503, lng: 4.3517 },
     timezone: 'Europe/Brussels',
-    posterUrl: '/posters/Brussels - Jan 31.jpg',
+    posterUrl: '/posters/brussels-jan-31.jpg',
     meetupLocation: {
       name: 'Av. Franklin Roosevelt 15',
       address: 'Av. Franklin Roosevelt 15, 1050 Ixelles',
@@ -158,7 +158,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 48.1351, lng: 11.582 },
     timezone: 'Europe/Berlin',
-    posterUrl: '/posters/Munich Jan 31.jpeg',
+    posterUrl: '/posters/munich-jan-31.jpeg',
     meetupLocation: {
       name: 'Gartnerplatz',
       address: 'Gartnerplatz, 80469 Munchen',
@@ -198,7 +198,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 59.9139, lng: 10.7522 },
     timezone: 'Europe/Oslo',
-    posterUrl: '/posters/Oslo.jpeg',
+    posterUrl: '/posters/oslo.jpeg',
     meetupLocation: {
       name: 'Jernbanetorget to Eidsvolls Plass',
       address: 'Jernbanetorget to Eidsvolls Plass, Oslo',
@@ -213,7 +213,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 53.4808, lng: -2.2426 },
     timezone: 'Europe/London',
-    posterUrl: '/posters/Manchester.jpeg',
+    posterUrl: '/posters/manchester.jpeg',
     meetupLocation: {
       name: 'Central Library',
       address: "St Peter's Square, Manchester M2 5PD",
@@ -227,7 +227,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 53.3811, lng: -1.4701 },
     timezone: 'Europe/London',
-    posterUrl: '/posters/Sheffield.jpeg',
+    posterUrl: '/posters/sheffield.jpeg',
     meetupLocation: {
       name: "Barker's Pool",
       address: "Barker's Pool, Sheffield S1 2JA",
@@ -241,7 +241,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 54.5973, lng: -5.9301 },
     timezone: 'Europe/London',
-    posterUrl: '/posters/Belfast.jpeg',
+    posterUrl: '/posters/belfast.jpeg',
     meetupLocation: {
       name: 'Belfast City Hall',
       address: 'Donegall Square N, Belfast BT1 5GS',
@@ -255,7 +255,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 52.2053, lng: 0.1218 },
     timezone: 'Europe/London',
-    posterUrl: '/posters/Cambridge.png',
+    posterUrl: '/posters/cambridge.png',
     meetupLocation: {
       name: 'Market Square',
       address: 'Market Square, Cambridge',
@@ -269,7 +269,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 50.1109, lng: 8.6821 },
     timezone: 'Europe/Berlin',
-    posterUrl: '/posters/Frankfurt.jpeg',
+    posterUrl: '/posters/frankfurt.jpeg',
     meetupLocation: {
       name: 'Rathenauplatz',
       address: 'Rathenauplatz (Goetheplatz), Frankfurt',
@@ -283,7 +283,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 53.5511, lng: 9.9937 },
     timezone: 'Europe/Berlin',
-    posterUrl: '/posters/Hamburg.jpeg',
+    posterUrl: '/posters/hamburg.jpeg',
     meetupLocation: {
       name: 'Kurt-Schumacher-Allee 10',
       address: 'Kurt-Schumacher-Allee 10, Hamburg',
@@ -297,7 +297,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 52.3759, lng: 9.7320 },
     timezone: 'Europe/Berlin',
-    posterUrl: '/posters/Hannover.jpeg',
+    posterUrl: '/posters/hannover.jpeg',
     meetupLocation: {
       name: 'Neues Rathaus',
       address: 'Trammplatz 2, 30159 Hannover',
@@ -311,7 +311,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 49.0069, lng: 8.4037 },
     timezone: 'Europe/Berlin',
-    posterUrl: '/posters/Karlsruhe, Germany.jpeg',
+    posterUrl: '/posters/karlsruhe-germany.jpeg',
     meetupLocation: {
       name: 'Kronenplatz to Marktplatz',
       address: 'Kronenplatz to Marktplatz, Karlsruhe',
@@ -325,7 +325,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 48.7758, lng: 9.1829 },
     timezone: 'Europe/Berlin',
-    posterUrl: '/posters/Stuttgart.jpeg',
+    posterUrl: '/posters/stuttgart.jpeg',
     meetupLocation: {
       name: 'Lautenschlagerstrasse',
       address: 'Lautenschlagerstrasse, 70173 Stuttgart',
@@ -339,7 +339,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 45.1885, lng: 5.7245 },
     timezone: 'Europe/Paris',
-    posterUrl: '/posters/Grenoble, France.jpg',
+    posterUrl: '/posters/grenoble-france.jpg',
     meetupLocation: {
       name: 'Place Victor Hugo',
       address: 'Place Victor Hugo, 38000 Grenoble',
@@ -353,7 +353,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 57.7089, lng: 11.9746 },
     timezone: 'Europe/Stockholm',
-    posterUrl: '/posters/Gothenburg, Sweden.jpeg',
+    posterUrl: '/posters/gothenburg-sweden.jpeg',
     meetupLocation: {
       name: 'Gotaplatsen',
       address: 'Gotaplatsen, Gothenburg',
@@ -367,7 +367,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 58.9700, lng: 5.7331 },
     timezone: 'Europe/Oslo',
-    posterUrl: '/posters/Stavanger, Norway.jpeg',
+    posterUrl: '/posters/stavanger-norway.jpeg',
     meetupLocation: {
       name: 'Torget',
       address: 'Torget, Stavanger',
@@ -381,7 +381,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 55.4038, lng: 10.4024 },
     timezone: 'Europe/Copenhagen',
-    posterUrl: '/posters/Odense, Denmark.jpg',
+    posterUrl: '/posters/odense-denmark.jpg',
     meetupLocation: {
       name: 'Grabrødre Plads',
       address: 'Grabrødre Plads 1, 5000 Odense',
@@ -395,7 +395,7 @@ export const cities: City[] = [
     region: 'europe',
     coordinates: { lat: 52.0705, lng: 4.3007 },
     timezone: 'Europe/Amsterdam',
-    posterUrl: '/posters/Holland.jpeg',
+    posterUrl: '/posters/holland.jpeg',
     meetupLocation: {
       name: 'Malieveld',
       address: 'Malieveld, Den Haag',
@@ -411,7 +411,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 40.7128, lng: -74.006 },
     timezone: 'America/New_York',
-    posterUrl: '/posters/NYC.jpeg',
+    posterUrl: '/posters/nyc.jpeg',
     meetupLocation: {
       name: '1033 5th Avenue',
       address: '1033 5th Avenue, NYC (Between 84th & 85th St)',
@@ -425,7 +425,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 34.0522, lng: -118.2437 },
     timezone: 'America/Los_Angeles',
-    posterUrl: '/posters/Westwood LA.jpeg',
+    posterUrl: '/posters/westwood-la.jpeg',
     meetupLocation: {
       name: 'Persian Square',
       address: 'Westwood Blvd, Los Angeles, CA 90024',
@@ -439,7 +439,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 37.7749, lng: -122.4194 },
     timezone: 'America/Los_Angeles',
-    posterUrl: '/posters/San Francisco.jpeg',
+    posterUrl: '/posters/san-francisco.jpeg',
     meetupLocation: {
       name: 'Golden Gate Bridge Gift Center',
       address: 'Golden Gate Bridge Gift Center, San Francisco, CA',
@@ -453,7 +453,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 43.6532, lng: -79.3832 },
     timezone: 'America/Toronto',
-    posterUrl: '/posters/Toronto.jpeg',
+    posterUrl: '/posters/toronto.jpeg',
     meetupLocation: {
       name: 'Sankofa (Dundas) Square',
       address: 'Sankofa Square, Dundas & Yonge, Toronto',
@@ -532,7 +532,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 45.5017, lng: -73.5673 },
     timezone: 'America/Montreal',
-    posterUrl: '/posters/Montreal English.jpg',
+    posterUrl: '/posters/montreal-english.jpg',
     meetupLocation: {
       name: 'Atwater Metro',
       address: 'Atwater Metro area, Montreal, QC',
@@ -599,7 +599,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 29.7604, lng: -95.3698 },
     timezone: 'America/Chicago',
-    posterUrl: '/posters/Houston - Sunday.jpg',
+    posterUrl: '/posters/houston-sunday.jpg',
     meetupLocation: {
       name: 'Hermann Park',
       address: '6001 Fannin St, Houston, TX 77030',
@@ -613,7 +613,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 33.0198, lng: -96.6989 },
     timezone: 'America/Chicago',
-    posterUrl: '/posters/Dallas (Plano), Texas.jpeg',
+    posterUrl: '/posters/dallas-plano-texas.jpeg',
     meetupLocation: {
       name: '9700 Coit Rd',
       address: '9700 Coit Rd, Plano, TX',
@@ -627,7 +627,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 29.4241, lng: -98.4936 },
     timezone: 'America/Chicago',
-    posterUrl: '/posters/San Antonio, Texas.jpeg',
+    posterUrl: '/posters/san-antonio-texas.jpeg',
     meetupLocation: {
       name: '4335 NW Loop 410',
       address: '4335 NW Loop 410, San Antonio, TX',
@@ -641,7 +641,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 36.1627, lng: -86.7816 },
     timezone: 'America/Chicago',
-    posterUrl: '/posters/Nashville, TN.jpeg',
+    posterUrl: '/posters/nashville-tn.jpeg',
     meetupLocation: {
       name: 'Estes Federal Building',
       address: '801 Broadway, Nashville, TN',
@@ -655,7 +655,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 37.6872, lng: -97.3301 },
     timezone: 'America/Chicago',
-    posterUrl: '/posters/Wichita, Kansas.jpeg',
+    posterUrl: '/posters/wichita-kansas.jpeg',
     meetupLocation: {
       name: 'Keeper Of The Plains',
       address: '339 Veterans Pkwy, Wichita, KS',
@@ -669,7 +669,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 41.7658, lng: -72.6734 },
     timezone: 'America/New_York',
-    posterUrl: '/posters/Hartford, Connecticut.jpeg',
+    posterUrl: '/posters/hartford-connecticut.jpeg',
     meetupLocation: {
       name: 'State Capitol',
       address: '210 Capitol Ave, Hartford, CT',
@@ -683,7 +683,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 33.4255, lng: -111.9400 },
     timezone: 'America/Phoenix',
-    posterUrl: '/posters/Tempe, Arizona.jpg',
+    posterUrl: '/posters/tempe-arizona.jpg',
     meetupLocation: {
       name: '452 E University Dr',
       address: '452 E University Dr, Tempe, AZ',
@@ -697,7 +697,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 28.5383, lng: -81.3792 },
     timezone: 'America/New_York',
-    posterUrl: '/posters/Orlando.jpeg',
+    posterUrl: '/posters/orlando.jpeg',
     meetupLocation: {
       name: 'Lake Eola',
       address: 'Lake Eola Park, Orlando, FL',
@@ -711,7 +711,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 33.6846, lng: -117.8265 },
     timezone: 'America/Los_Angeles',
-    posterUrl: '/posters/Irvine, CA.png',
+    posterUrl: '/posters/irvine-ca.png',
     meetupLocation: {
       name: 'Culver & Barranca Pkwy',
       address: 'Culver & Barranca Pkwy, Irvine, CA',
@@ -725,7 +725,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 40.8007, lng: -73.7285 },
     timezone: 'America/New_York',
-    posterUrl: '/posters/Village Green Park, Great Neck.jpeg',
+    posterUrl: '/posters/village-green-park-great-neck.jpeg',
     meetupLocation: {
       name: 'Village Green Park',
       address: 'Village Green Park, Great Neck, NY',
@@ -739,7 +739,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 45.4215, lng: -75.6972 },
     timezone: 'America/Toronto',
-    posterUrl: '/posters/Ottawa - Feb 1.jpeg',
+    posterUrl: '/posters/ottawa-feb-1.jpeg',
     meetupLocation: {
       name: 'Parliament Hill',
       address: 'Wellington St, Ottawa, ON',
@@ -753,7 +753,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 46.2382, lng: -63.1311 },
     timezone: 'America/Halifax',
-    posterUrl: '/posters/Charlottetown, PEI.jpeg',
+    posterUrl: '/posters/charlottetown-pei.jpeg',
     meetupLocation: {
       name: 'Cenotaph of Veterans',
       address: 'Cenotaph of Veterans, Charlottetown, PEI',
@@ -767,7 +767,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 53.9171, lng: -122.7497 },
     timezone: 'America/Vancouver',
-    posterUrl: '/posters/Prince George, BC.jpeg',
+    posterUrl: '/posters/prince-george-bc.jpeg',
     meetupLocation: {
       name: 'St. Michael Hall',
       address: 'St. Michael Hall, Prince George, BC',
@@ -781,7 +781,7 @@ export const cities: City[] = [
     region: 'north-america',
     coordinates: { lat: 47.6101, lng: -122.2015 },
     timezone: 'America/Los_Angeles',
-    posterUrl: '/posters/Washington State.jpeg',
+    posterUrl: '/posters/washington-state.jpeg',
     meetupLocation: {
       name: 'Bellevue Park',
       address: 'Bellevue Park, Bellevue, WA',
@@ -797,7 +797,7 @@ export const cities: City[] = [
     region: 'oceania',
     coordinates: { lat: -33.8688, lng: 151.2093 },
     timezone: 'Australia/Sydney',
-    posterUrl: '/posters/Sydney.jpeg',
+    posterUrl: '/posters/sydney.jpeg',
     meetupLocation: {
       name: 'Hyde Park North',
       address: 'Hyde Park North, Sydney NSW 2000',
@@ -824,7 +824,7 @@ export const cities: City[] = [
     region: 'oceania',
     coordinates: { lat: -36.8485, lng: 174.7633 },
     timezone: 'Pacific/Auckland',
-    posterUrl: '/posters/Auckland, NZ.jpeg',
+    posterUrl: '/posters/auckland-nz.jpeg',
     meetupLocation: {
       name: 'Western Park',
       address: 'Western Park, Ponsonby, Auckland',
@@ -838,7 +838,7 @@ export const cities: City[] = [
     region: 'oceania',
     coordinates: { lat: -27.4698, lng: 153.0251 },
     timezone: 'Australia/Brisbane',
-    posterUrl: '/posters/Brisbane.jpeg',
+    posterUrl: '/posters/brisbane.jpeg',
     meetupLocation: {
       name: 'Reddacliff Place',
       address: 'Reddacliff Place, Brisbane QLD 4000',
