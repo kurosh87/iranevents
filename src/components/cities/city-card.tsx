@@ -15,23 +15,17 @@ interface CityCardProps {
 }
 
 export function CityCard({ city, nextEventDate }: CityCardProps) {
+  const fallbackImage = `https://picsum.photos/seed/${encodeURIComponent(city.id)}/400/300`
+
   return (
     <Link to="/cities/$cityId" params={{ cityId: city.id }}>
       <Card className="overflow-hidden transition-all hover:shadow-lg hover:ring-2 hover:ring-primary/20 cursor-pointer">
-        {city.posterUrl ? (
-          <img
-            src={city.posterUrl}
-            alt={city.name}
-            className="h-40 w-full object-cover"
-            loading="lazy"
-          />
-        ) : (
-          <div className="h-40 w-full bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center">
-            <span className="text-4xl font-bold text-primary/30">
-              {city.name.charAt(0)}
-            </span>
-          </div>
-        )}
+        <img
+          src={city.posterUrl ?? fallbackImage}
+          alt={city.name}
+          className="h-40 w-full object-cover"
+          loading="lazy"
+        />
         <CardHeader className="pb-2">
           <div className="flex items-start justify-between gap-2">
             <CardTitle className="text-lg">{city.name}</CardTitle>
