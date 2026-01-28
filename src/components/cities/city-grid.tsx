@@ -47,7 +47,7 @@ export function CityGrid({ cities, groupByRegion = true }: CityGridProps) {
   const [selectedRegion, setSelectedRegion] = useState<Region | 'all'>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCountry, setSelectedCountry] = useState<string>('all')
-  const [showOnlyUpcoming, setShowOnlyUpcoming] = useState(false)
+  const [showOnlyUpcoming, setShowOnlyUpcoming] = useState(true)
 
   const countries = useMemo(() => {
     const uniqueCountries = [...new Set(cities.map((city) => city.country))]

@@ -38,18 +38,18 @@ export const Route = createFileRoute('/cities/$cityId/')({
 function CityDetailPage() {
   const { city, upcomingEvents, pastEvents } = Route.useLoaderData()
 
-  const posterUrl =
-    city.posterUrl ??
-    `https://picsum.photos/seed/${encodeURIComponent(city.id)}/1200/400`
-
   return (
     <div>
       <div className="relative h-64 w-full overflow-hidden">
-        <img
-          src={posterUrl}
-          alt={city.name}
-          className="h-full w-full object-cover"
-        />
+        {city.posterUrl ? (
+          <img
+            src={city.posterUrl}
+            alt={city.name}
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <div className="h-full w-full bg-gradient-to-br from-primary/20 via-primary/10 to-background" />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-6">
           <div className="container mx-auto">

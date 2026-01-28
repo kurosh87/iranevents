@@ -9,19 +9,55 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as NewsIndexRouteImport } from './routes/news/index'
+import { Route as HistoryIndexRouteImport } from './routes/history/index'
 import { Route as CitiesIndexRouteImport } from './routes/cities/index'
+import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
+import { Route as NewsSlugRouteImport } from './routes/news/$slug'
+import { Route as ArticlesSlugRouteImport } from './routes/articles/$slug'
 import { Route as CitiesCityIdIndexRouteImport } from './routes/cities/$cityId/index'
 import { Route as CitiesCityIdEventsEventIdRouteImport } from './routes/cities/$cityId/events/$eventId'
 
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NewsIndexRoute = NewsIndexRouteImport.update({
+  id: '/news/',
+  path: '/news/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoryIndexRoute = HistoryIndexRouteImport.update({
+  id: '/history/',
+  path: '/history/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CitiesIndexRoute = CitiesIndexRouteImport.update({
   id: '/cities/',
   path: '/cities/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
+  id: '/articles/',
+  path: '/articles/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsSlugRoute = NewsSlugRouteImport.update({
+  id: '/news/$slug',
+  path: '/news/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
+  id: '/articles/$slug',
+  path: '/articles/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CitiesCityIdIndexRoute = CitiesCityIdIndexRouteImport.update({
@@ -38,20 +74,38 @@ const CitiesCityIdEventsEventIdRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
+  '/news/$slug': typeof NewsSlugRoute
+  '/articles/': typeof ArticlesIndexRoute
   '/cities/': typeof CitiesIndexRoute
+  '/history/': typeof HistoryIndexRoute
+  '/news/': typeof NewsIndexRoute
   '/cities/$cityId/': typeof CitiesCityIdIndexRoute
   '/cities/$cityId/events/$eventId': typeof CitiesCityIdEventsEventIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
+  '/news/$slug': typeof NewsSlugRoute
+  '/articles': typeof ArticlesIndexRoute
   '/cities': typeof CitiesIndexRoute
+  '/history': typeof HistoryIndexRoute
+  '/news': typeof NewsIndexRoute
   '/cities/$cityId': typeof CitiesCityIdIndexRoute
   '/cities/$cityId/events/$eventId': typeof CitiesCityIdEventsEventIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
+  '/news/$slug': typeof NewsSlugRoute
+  '/articles/': typeof ArticlesIndexRoute
   '/cities/': typeof CitiesIndexRoute
+  '/history/': typeof HistoryIndexRoute
+  '/news/': typeof NewsIndexRoute
   '/cities/$cityId/': typeof CitiesCityIdIndexRoute
   '/cities/$cityId/events/$eventId': typeof CitiesCityIdEventsEventIdRoute
 }
@@ -59,28 +113,63 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
+    | '/articles/$slug'
+    | '/news/$slug'
+    | '/articles/'
     | '/cities/'
+    | '/history/'
+    | '/news/'
     | '/cities/$cityId/'
     | '/cities/$cityId/events/$eventId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cities' | '/cities/$cityId' | '/cities/$cityId/events/$eventId'
+  to:
+    | '/'
+    | '/about'
+    | '/articles/$slug'
+    | '/news/$slug'
+    | '/articles'
+    | '/cities'
+    | '/history'
+    | '/news'
+    | '/cities/$cityId'
+    | '/cities/$cityId/events/$eventId'
   id:
     | '__root__'
     | '/'
+    | '/about'
+    | '/articles/$slug'
+    | '/news/$slug'
+    | '/articles/'
     | '/cities/'
+    | '/history/'
+    | '/news/'
     | '/cities/$cityId/'
     | '/cities/$cityId/events/$eventId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ArticlesSlugRoute: typeof ArticlesSlugRoute
+  NewsSlugRoute: typeof NewsSlugRoute
+  ArticlesIndexRoute: typeof ArticlesIndexRoute
   CitiesIndexRoute: typeof CitiesIndexRoute
+  HistoryIndexRoute: typeof HistoryIndexRoute
+  NewsIndexRoute: typeof NewsIndexRoute
   CitiesCityIdIndexRoute: typeof CitiesCityIdIndexRoute
   CitiesCityIdEventsEventIdRoute: typeof CitiesCityIdEventsEventIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -88,11 +177,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/news/': {
+      id: '/news/'
+      path: '/news'
+      fullPath: '/news/'
+      preLoaderRoute: typeof NewsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/history/': {
+      id: '/history/'
+      path: '/history'
+      fullPath: '/history/'
+      preLoaderRoute: typeof HistoryIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cities/': {
       id: '/cities/'
       path: '/cities'
       fullPath: '/cities/'
       preLoaderRoute: typeof CitiesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles/': {
+      id: '/articles/'
+      path: '/articles'
+      fullPath: '/articles/'
+      preLoaderRoute: typeof ArticlesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news/$slug': {
+      id: '/news/$slug'
+      path: '/news/$slug'
+      fullPath: '/news/$slug'
+      preLoaderRoute: typeof NewsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles/$slug': {
+      id: '/articles/$slug'
+      path: '/articles/$slug'
+      fullPath: '/articles/$slug'
+      preLoaderRoute: typeof ArticlesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cities/$cityId/': {
@@ -114,7 +238,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ArticlesSlugRoute: ArticlesSlugRoute,
+  NewsSlugRoute: NewsSlugRoute,
+  ArticlesIndexRoute: ArticlesIndexRoute,
   CitiesIndexRoute: CitiesIndexRoute,
+  HistoryIndexRoute: HistoryIndexRoute,
+  NewsIndexRoute: NewsIndexRoute,
   CitiesCityIdIndexRoute: CitiesCityIdIndexRoute,
   CitiesCityIdEventsEventIdRoute: CitiesCityIdEventsEventIdRoute,
 }

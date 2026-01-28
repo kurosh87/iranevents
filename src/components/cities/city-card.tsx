@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { MapPin, Calendar } from 'lucide-react'
+import { MapPin, Calendar, CalendarX } from 'lucide-react'
 
 interface CityCardProps {
   city: City
@@ -15,17 +15,24 @@ interface CityCardProps {
 }
 
 export function CityCard({ city, nextEventDate }: CityCardProps) {
-  const fallbackImage = `https://picsum.photos/seed/${encodeURIComponent(city.id)}/400/300`
+  const hasImage = !!city.posterUrl
 
   return (
     <Link to="/cities/$cityId" params={{ cityId: city.id }}>
       <Card className="overflow-hidden transition-all hover:shadow-lg hover:ring-2 hover:ring-primary/20 cursor-pointer">
-        <img
-          src={city.posterUrl ?? fallbackImage}
-          alt={city.name}
-          className="h-40 w-full object-cover"
-          loading="lazy"
-        />
+        {hasImage ? (
+          <img
+            src={city.posterUrl}
+            alt={city.name}
+            className="h-40 w-full object-cover"
+            loading="lazy"
+          />
+        ) : (
+          <div className="h-40 w-full bg-gradient-to-br from-muted to-muted/50 flex flex-col items-center justify-center text-muted-foreground">
+            <CalendarX className="h-8 w-8 mb-2" />
+            <span className="text-sm">No events scheduled</span>
+          </div>
+        )}
         <CardHeader className="pb-2">
           <div className="flex items-start justify-between gap-2">
             <CardTitle className="text-lg">{city.name}</CardTitle>
