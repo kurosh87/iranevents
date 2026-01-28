@@ -36,7 +36,7 @@ export const events: RallyEvent[] = [
     address: 'Kurfurstendamm / Joachimstaler Str., Berlin',
     coordinates: { lat: 52.5046, lng: 13.3326 },
     theme: 'Iranian Revolution',
-    posterImage: '/posters/Berlin.jpeg',
+    posterImage: '/posters/berlin.jpeg',
     status: 'upcoming',
     facebookGroupUrl: 'https://facebook.com/groups/iranberlin',
     telegramUrl: 'https://t.me/iranberlin',
@@ -51,7 +51,7 @@ export const events: RallyEvent[] = [
     venue: 'Norra Bantorget',
     address: 'Norra Bantorget, Stockholm',
     coordinates: { lat: 59.3340, lng: 18.0583 },
-    posterImage: '/posters/Stockholm.jpeg',
+    posterImage: '/posters/stockholm.jpeg',
     status: 'upcoming',
   },
   {
@@ -65,7 +65,7 @@ export const events: RallyEvent[] = [
     venue: 'Heldenplatz',
     address: 'Heldenplatz, 1010 Wien',
     coordinates: { lat: 48.2066, lng: 16.3633 },
-    posterImage: '/posters/Vienna, Austria.jpg',
+    posterImage: '/posters/vienna-austria.jpg',
     status: 'upcoming',
   },
   {
@@ -79,7 +79,7 @@ export const events: RallyEvent[] = [
     venue: 'Av. Franklin Roosevelt 15',
     address: 'Av. Franklin Roosevelt 15, 1050 Ixelles',
     coordinates: { lat: 50.8137, lng: 4.3809 },
-    posterImage: '/posters/Brussels - Jan 31.jpg',
+    posterImage: '/posters/brussels-jan-31.jpg',
     status: 'upcoming',
   },
   {
@@ -93,7 +93,7 @@ export const events: RallyEvent[] = [
     venue: 'Av. Franklin Roosevelt 15',
     address: 'Av. Franklin Roosevelt 15, 1050 Ixelles',
     coordinates: { lat: 50.8137, lng: 4.3809 },
-    posterImage: '/posters/Brussels - Feb 1.jpeg',
+    posterImage: '/posters/brussels-feb-1.jpeg',
     status: 'upcoming',
   },
   {
@@ -106,7 +106,7 @@ export const events: RallyEvent[] = [
     venue: 'Gartnerplatz',
     address: 'Gartnerplatz, 80469 Munchen',
     coordinates: { lat: 48.1306, lng: 11.5769 },
-    posterImage: '/posters/Munich Jan 30.jpeg',
+    posterImage: '/posters/munich-jan-30.jpeg',
     status: 'upcoming',
   },
   {
@@ -119,7 +119,7 @@ export const events: RallyEvent[] = [
     venue: 'Gartnerplatz',
     address: 'Gartnerplatz, 80469 Munchen',
     coordinates: { lat: 48.1306, lng: 11.5769 },
-    posterImage: '/posters/Munich Jan 31.jpeg',
+    posterImage: '/posters/munich-jan-31.jpeg',
     status: 'upcoming',
   },
   {
@@ -133,7 +133,7 @@ export const events: RallyEvent[] = [
     venue: 'Jernbanetorget to Eidsvolls Plass',
     address: 'Jernbanetorget to Eidsvolls Plass, Oslo',
     coordinates: { lat: 59.9127, lng: 10.7518 },
-    posterImage: '/posters/Oslo.jpeg',
+    posterImage: '/posters/oslo.jpeg',
     status: 'upcoming',
   },
   {
@@ -146,7 +146,7 @@ export const events: RallyEvent[] = [
     venue: 'Placa de Catalunya',
     address: 'Placa de Catalunya, 08002 Barcelona',
     coordinates: { lat: 41.3870, lng: 2.1700 },
-    posterImage: '/posters/Barcelona.jpeg',
+    posterImage: '/posters/barcelona.jpeg',
     status: 'upcoming',
   },
   {
@@ -159,7 +159,7 @@ export const events: RallyEvent[] = [
     venue: 'Piazzale Ugo La Malfa',
     address: 'Piazzale Ugo La Malfa, Roma',
     coordinates: { lat: 41.9145, lng: 12.4723 },
-    posterImage: '/posters/Rome.png',
+    posterImage: '/posters/rome.png',
     status: 'upcoming',
   },
   {
@@ -173,7 +173,7 @@ export const events: RallyEvent[] = [
     venue: 'Central Library',
     address: "St Peter's Square, Manchester M2 5PD",
     coordinates: { lat: 53.4784, lng: -2.2451 },
-    posterImage: '/posters/Manchester.jpeg',
+    posterImage: '/posters/manchester.jpeg',
     status: 'upcoming',
   },
   {
@@ -187,7 +187,7 @@ export const events: RallyEvent[] = [
     venue: "Barker's Pool",
     address: "Barker's Pool, Sheffield S1 2JA",
     coordinates: { lat: 53.3814, lng: -1.4746 },
-    posterImage: '/posters/Sheffield.jpeg',
+    posterImage: '/posters/sheffield.jpeg',
     status: 'upcoming',
   },
   {
@@ -200,7 +200,7 @@ export const events: RallyEvent[] = [
     venue: 'Belfast City Hall',
     address: 'Donegall Square N, Belfast BT1 5GS',
     coordinates: { lat: 54.5964, lng: -5.9302 },
-    posterImage: '/posters/Belfast.jpeg',
+    posterImage: '/posters/belfast.jpeg',
     status: 'upcoming',
   },
   {
@@ -214,7 +214,7 @@ export const events: RallyEvent[] = [
     venue: 'Market Square',
     address: 'Market Square, Cambridge',
     coordinates: { lat: 52.2054, lng: 0.1183 },
-    posterImage: '/posters/Cambridge.png',
+    posterImage: '/posters/cambridge.png',
     status: 'upcoming',
   },
   {
@@ -227,7 +227,7 @@ export const events: RallyEvent[] = [
     venue: 'Rathenauplatz',
     address: 'Rathenauplatz (Goetheplatz), Frankfurt',
     coordinates: { lat: 50.1136, lng: 8.6743 },
-    posterImage: '/posters/Frankfurt - WEDNESDAY and SATURDAY.jpeg',
+    posterImage: '/posters/frankfurt-wednesday-and-saturday.jpeg',
     status: 'upcoming',
   },
   {
@@ -240,7 +240,7 @@ export const events: RallyEvent[] = [
     venue: 'Rathenauplatz',
     address: 'Rathenauplatz (Goetheplatz), Frankfurt',
     coordinates: { lat: 50.1136, lng: 8.6743 },
-    posterImage: '/posters/Frankfurt.jpeg',
+    posterImage: '/posters/frankfurt.jpeg',
     status: 'upcoming',
   },
   {
@@ -253,7 +253,7 @@ export const events: RallyEvent[] = [
     venue: 'Kurt-Schumacher-Allee 10',
     address: 'Kurt-Schumacher-Allee 10, Hamburg',
     coordinates: { lat: 53.5530, lng: 10.0065 },
-    posterImage: '/posters/Hamburg.jpeg',
+    posterImage: '/posters/hamburg.jpeg',
     status: 'upcoming',
   },
   {
@@ -267,7 +267,7 @@ export const events: RallyEvent[] = [
     venue: 'Neues Rathaus',
     address: 'Trammplatz 2, 30159 Hannover',
     coordinates: { lat: 52.3676, lng: 9.7385 },
-    posterImage: '/posters/Hannover.jpeg',
+    posterImage: '/posters/hannover.jpeg',
     status: 'upcoming',
   },
   {
@@ -281,7 +281,7 @@ export const events: RallyEvent[] = [
     venue: 'Kronenplatz to Marktplatz',
     address: 'Kronenplatz to Marktplatz, Karlsruhe',
     coordinates: { lat: 49.0094, lng: 8.4044 },
-    posterImage: '/posters/Karlsruhe, Germany.jpeg',
+    posterImage: '/posters/karlsruhe-germany.jpeg',
     status: 'upcoming',
   },
   {
@@ -295,7 +295,7 @@ export const events: RallyEvent[] = [
     venue: 'Lautenschlagerstrasse',
     address: 'Lautenschlagerstrasse, 70173 Stuttgart',
     coordinates: { lat: 48.7831, lng: 9.1820 },
-    posterImage: '/posters/Stuttgart.jpeg',
+    posterImage: '/posters/stuttgart.jpeg',
     status: 'upcoming',
   },
   {
@@ -308,7 +308,7 @@ export const events: RallyEvent[] = [
     venue: 'Place Victor Hugo',
     address: 'Place Victor Hugo, 38000 Grenoble',
     coordinates: { lat: 45.1875, lng: 5.7246 },
-    posterImage: '/posters/Grenoble, France.jpg',
+    posterImage: '/posters/grenoble-france.jpg',
     status: 'upcoming',
   },
   {
@@ -321,7 +321,7 @@ export const events: RallyEvent[] = [
     venue: 'Gotaplatsen',
     address: 'Gotaplatsen, Gothenburg',
     coordinates: { lat: 57.6969, lng: 11.9797 },
-    posterImage: '/posters/Gothenburg, Sweden.jpeg',
+    posterImage: '/posters/gothenburg-sweden.jpeg',
     status: 'upcoming',
   },
   {
@@ -335,7 +335,7 @@ export const events: RallyEvent[] = [
     venue: 'Torget',
     address: 'Torget, Stavanger',
     coordinates: { lat: 58.9701, lng: 5.7305 },
-    posterImage: '/posters/Stavanger, Norway.jpeg',
+    posterImage: '/posters/stavanger-norway.jpeg',
     status: 'upcoming',
   },
   {
@@ -349,7 +349,7 @@ export const events: RallyEvent[] = [
     venue: 'Grabrødre Plads',
     address: 'Grabrødre Plads 1, 5000 Odense',
     coordinates: { lat: 55.3962, lng: 10.3872 },
-    posterImage: '/posters/Odense, Denmark.jpg',
+    posterImage: '/posters/odense-denmark.jpg',
     status: 'upcoming',
   },
   {
@@ -363,7 +363,7 @@ export const events: RallyEvent[] = [
     venue: 'Malieveld',
     address: 'Malieveld, Den Haag',
     coordinates: { lat: 52.0828, lng: 4.3245 },
-    posterImage: '/posters/Holland.jpeg',
+    posterImage: '/posters/holland.jpeg',
     status: 'upcoming',
   },
 
@@ -380,7 +380,7 @@ export const events: RallyEvent[] = [
     coordinates: { lat: 40.7794, lng: -73.9632 },
     theme: 'Iranian Revolution',
     organizer: '@royal_army_nyc',
-    posterImage: '/posters/NYC.jpeg',
+    posterImage: '/posters/nyc.jpeg',
     status: 'upcoming',
     facebookGroupUrl: 'https://facebook.com/groups/irannyc',
     instagramUrl: 'https://instagram.com/royal_army_nyc',
@@ -396,7 +396,7 @@ export const events: RallyEvent[] = [
     venue: 'Golden Gate Bridge Gift Center',
     address: 'Golden Gate Bridge Gift Center, San Francisco, CA',
     coordinates: { lat: 37.8079, lng: -122.4750 },
-    posterImage: '/posters/San Francisco.jpeg',
+    posterImage: '/posters/san-francisco.jpeg',
     status: 'upcoming',
   },
   {
@@ -410,7 +410,7 @@ export const events: RallyEvent[] = [
     venue: 'Persian Square',
     address: 'Westwood Blvd, Los Angeles, CA 90024',
     coordinates: { lat: 34.0611, lng: -118.4466 },
-    posterImage: '/posters/Westwood LA.jpeg',
+    posterImage: '/posters/westwood-la.jpeg',
     status: 'upcoming',
   },
   {
@@ -424,7 +424,7 @@ export const events: RallyEvent[] = [
     venue: 'Culver & Barranca Pkwy',
     address: 'Culver & Barranca Pkwy, Irvine, CA',
     coordinates: { lat: 33.6897, lng: -117.8270 },
-    posterImage: '/posters/Irvine, CA.png',
+    posterImage: '/posters/irvine-ca.png',
     status: 'upcoming',
   },
   {
@@ -438,7 +438,7 @@ export const events: RallyEvent[] = [
     venue: 'Culver & Barranca Pkwy',
     address: 'Culver & Barranca Pkwy, Irvine, CA',
     coordinates: { lat: 33.6897, lng: -117.8270 },
-    posterImage: '/posters/Irvine, CA.png',
+    posterImage: '/posters/irvine-ca.png',
     status: 'upcoming',
   },
   {
@@ -451,7 +451,7 @@ export const events: RallyEvent[] = [
     venue: 'Westheimer',
     address: 'Westheimer, Houston, TX',
     coordinates: { lat: 29.7450, lng: -95.4620 },
-    posterImage: '/posters/Houston - Friday.jpeg',
+    posterImage: '/posters/houston-friday.jpeg',
     status: 'upcoming',
   },
   {
@@ -464,7 +464,7 @@ export const events: RallyEvent[] = [
     venue: 'Hermann Park',
     address: '6001 Fannin St, Houston, TX 77030',
     coordinates: { lat: 29.7138, lng: -95.3911 },
-    posterImage: '/posters/Houston - Sunday.jpg',
+    posterImage: '/posters/houston-sunday.jpg',
     status: 'upcoming',
   },
   {
@@ -478,7 +478,7 @@ export const events: RallyEvent[] = [
     venue: '9700 Coit Rd',
     address: '9700 Coit Rd, Plano, TX',
     coordinates: { lat: 33.0356, lng: -96.7698 },
-    posterImage: '/posters/Dallas (Plano), Texas.jpeg',
+    posterImage: '/posters/dallas-plano-texas.jpeg',
     status: 'upcoming',
   },
   {
@@ -492,7 +492,7 @@ export const events: RallyEvent[] = [
     venue: '4335 NW Loop 410',
     address: '4335 NW Loop 410, San Antonio, TX',
     coordinates: { lat: 29.5072, lng: -98.5677 },
-    posterImage: '/posters/San Antonio, Texas.jpeg',
+    posterImage: '/posters/san-antonio-texas.jpeg',
     status: 'upcoming',
   },
   {
@@ -506,7 +506,7 @@ export const events: RallyEvent[] = [
     venue: 'Estes Federal Building',
     address: '801 Broadway, Nashville, TN',
     coordinates: { lat: 36.1588, lng: -86.7787 },
-    posterImage: '/posters/Nashville, TN.jpeg',
+    posterImage: '/posters/nashville-tn.jpeg',
     status: 'upcoming',
   },
   {
@@ -519,7 +519,7 @@ export const events: RallyEvent[] = [
     venue: 'Keeper Of The Plains',
     address: '339 Veterans Pkwy, Wichita, KS',
     coordinates: { lat: 37.6840, lng: -97.3516 },
-    posterImage: '/posters/Wichita, Kansas.jpeg',
+    posterImage: '/posters/wichita-kansas.jpeg',
     status: 'upcoming',
   },
   {
@@ -533,7 +533,7 @@ export const events: RallyEvent[] = [
     venue: 'State Capitol',
     address: '210 Capitol Ave, Hartford, CT',
     coordinates: { lat: 41.7642, lng: -72.6826 },
-    posterImage: '/posters/Hartford, Connecticut.jpeg',
+    posterImage: '/posters/hartford-connecticut.jpeg',
     status: 'upcoming',
   },
   {
@@ -547,7 +547,7 @@ export const events: RallyEvent[] = [
     venue: '452 E University Dr',
     address: '452 E University Dr, Tempe, AZ',
     coordinates: { lat: 33.4217, lng: -111.9341 },
-    posterImage: '/posters/Tempe, Arizona.jpg',
+    posterImage: '/posters/tempe-arizona.jpg',
     status: 'upcoming',
   },
   {
@@ -561,7 +561,7 @@ export const events: RallyEvent[] = [
     venue: 'Lake Eola',
     address: 'Lake Eola Park, Orlando, FL',
     coordinates: { lat: 28.5433, lng: -81.3736 },
-    posterImage: '/posters/Orlando.jpeg',
+    posterImage: '/posters/orlando.jpeg',
     status: 'upcoming',
   },
   {
@@ -574,7 +574,7 @@ export const events: RallyEvent[] = [
     venue: 'Village Green Park',
     address: 'Village Green Park, Great Neck, NY',
     coordinates: { lat: 40.8007, lng: -73.7285 },
-    posterImage: '/posters/Village Green Park, Great Neck.jpeg',
+    posterImage: '/posters/village-green-park-great-neck.jpeg',
     status: 'upcoming',
   },
   {
@@ -587,7 +587,7 @@ export const events: RallyEvent[] = [
     venue: 'Bellevue Park',
     address: 'Bellevue Park, Bellevue, WA',
     coordinates: { lat: 47.6137, lng: -122.2067 },
-    posterImage: '/posters/Washington State.jpeg',
+    posterImage: '/posters/washington-state.jpeg',
     status: 'upcoming',
   },
   {
@@ -600,7 +600,7 @@ export const events: RallyEvent[] = [
     venue: 'Sankofa (Dundas) Square',
     address: 'Sankofa Square, Dundas & Yonge, Toronto',
     coordinates: { lat: 43.6561, lng: -79.3802 },
-    posterImage: '/posters/Toronto.jpeg',
+    posterImage: '/posters/toronto.jpeg',
     status: 'upcoming',
     facebookGroupUrl: 'https://facebook.com/groups/irantoronto',
     telegramUrl: 'https://t.me/irantoronto',
@@ -616,7 +616,7 @@ export const events: RallyEvent[] = [
     venue: 'Atwater Metro',
     address: 'Atwater Metro area, Montreal, QC',
     coordinates: { lat: 45.4897, lng: -73.5857 },
-    posterImage: '/posters/Montreal English.jpg',
+    posterImage: '/posters/montreal-english.jpg',
     status: 'upcoming',
   },
   {
@@ -629,7 +629,7 @@ export const events: RallyEvent[] = [
     venue: 'Tabaret Hall',
     address: 'Tabaret Hall, University of Ottawa',
     coordinates: { lat: 45.4231, lng: -75.6830 },
-    posterImage: '/posters/Ottawa - Friday.jpeg',
+    posterImage: '/posters/ottawa-friday.jpeg',
     status: 'upcoming',
   },
   {
@@ -642,7 +642,7 @@ export const events: RallyEvent[] = [
     venue: 'Parliament Hill',
     address: 'Wellington St, Ottawa, ON',
     coordinates: { lat: 45.4236, lng: -75.7009 },
-    posterImage: '/posters/Ottawa - Feb 1.jpeg',
+    posterImage: '/posters/ottawa-feb-1.jpeg',
     status: 'upcoming',
   },
   {
@@ -656,7 +656,7 @@ export const events: RallyEvent[] = [
     venue: 'St. Michael Hall',
     address: 'St. Michael Hall, Prince George, BC',
     coordinates: { lat: 53.9171, lng: -122.7497 },
-    posterImage: '/posters/Prince George, BC.jpeg',
+    posterImage: '/posters/prince-george-bc.jpeg',
     status: 'upcoming',
   },
   {
@@ -670,7 +670,7 @@ export const events: RallyEvent[] = [
     venue: 'Cenotaph of Veterans',
     address: 'Cenotaph of Veterans, Charlottetown, PEI',
     coordinates: { lat: 46.2343, lng: -63.1268 },
-    posterImage: '/posters/Charlottetown, PEI.jpeg',
+    posterImage: '/posters/charlottetown-pei.jpeg',
     status: 'upcoming',
   },
 
@@ -686,7 +686,7 @@ export const events: RallyEvent[] = [
     venue: 'Hyde Park North',
     address: 'Hyde Park North, Sydney NSW 2000',
     coordinates: { lat: -33.8723, lng: 151.2109 },
-    posterImage: '/posters/Sydney.jpeg',
+    posterImage: '/posters/sydney.jpeg',
     status: 'upcoming',
   },
   {
@@ -700,7 +700,7 @@ export const events: RallyEvent[] = [
     venue: 'Reddacliff Place',
     address: 'Reddacliff Place, Brisbane QLD 4000',
     coordinates: { lat: -27.4697, lng: 153.0247 },
-    posterImage: '/posters/Brisbane.jpeg',
+    posterImage: '/posters/brisbane.jpeg',
     status: 'upcoming',
   },
   {
@@ -714,7 +714,7 @@ export const events: RallyEvent[] = [
     venue: 'Western Park',
     address: 'Western Park, Ponsonby, Auckland',
     coordinates: { lat: -36.8587, lng: 174.7449 },
-    posterImage: '/posters/Auckland, NZ.jpeg',
+    posterImage: '/posters/auckland-nz.jpeg',
     status: 'upcoming',
   },
 ]
