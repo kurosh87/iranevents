@@ -24,19 +24,17 @@ export function HeroSection({ title, subtitle, className, children }: HeroSectio
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
       </div>
 
-      <div className="relative container mx-auto px-4 py-20 md:py-28 lg:py-36">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-block rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 md:px-12 md:py-8 shadow-2xl">
-            <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl drop-shadow-lg">
-              {title}
-            </h1>
-            {subtitle && (
-              <p className="mt-4 text-base text-white/90 md:text-lg lg:text-xl drop-shadow-md">
-                {subtitle}
-              </p>
-            )}
-          </div>
-          {children && <div className="mt-8">{children}</div>}
+      <div className="relative container mx-auto px-4 py-24 md:py-32 lg:py-40">
+        <div className="mx-auto max-w-4xl text-center">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl [text-shadow:_0_4px_12px_rgb(0_0_0_/_50%),_0_2px_4px_rgb(0_0_0_/_30%)]">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="mt-6 text-lg text-white md:text-xl lg:text-2xl font-medium [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
+              {subtitle}
+            </p>
+          )}
+          {children && <div className="mt-10">{children}</div>}
         </div>
       </div>
     </section>
