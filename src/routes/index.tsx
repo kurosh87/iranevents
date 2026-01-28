@@ -22,8 +22,8 @@ function HomePage() {
   return (
     <>
       <HeroSection
-        title="Iran Revolution"
-        subtitle="Find solidarity events and rallies worldwide."
+        title="The People of Iran Need You"
+        subtitle="Join protests worldwide. Show up. Be counted. The regime is killing civilians."
       >
         <div className="flex flex-wrap justify-center gap-4">
           <Button
@@ -34,7 +34,7 @@ function HomePage() {
                 ?.scrollIntoView({ behavior: 'smooth' })
             }
           >
-            Find Events
+            Find a Protest Near You
           </Button>
         </div>
       </HeroSection>
@@ -43,16 +43,16 @@ function HomePage() {
         <div className="space-y-16">
           <section id="events">
             <SectionHeader
-              title="Events Worldwide"
-              subtitle="Rallies and meetups in 40+ cities"
+              title="Protests Worldwide"
+              subtitle="40+ cities standing with Iran"
             />
             <WorldMap cities={cities} onCityClick={handleCityClick} />
           </section>
 
           <section>
             <SectionHeader
-              title="Browse by City"
-              subtitle="Find events in your area"
+              title="Take Action"
+              subtitle="Find a protest in your city"
             />
             <CityGrid cities={cities} groupByRegion />
           </section>
