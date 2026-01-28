@@ -180,7 +180,7 @@ interface EventCardProps {
 }
 
 function EventCard({ event, cityId, isPast }: EventCardProps) {
-  const hasLinks = event.facebookGroupUrl || event.telegramUrl || event.instagramUrl
+  const hasSocialLinks = event.facebookGroupUrl || event.telegramUrl || event.instagramUrl
 
   return (
     <Card className="transition-all hover:shadow-md hover:ring-1 hover:ring-primary/20">
@@ -228,59 +228,73 @@ function EventCard({ event, cityId, isPast }: EventCardProps) {
           </div>
         </CardContent>
       </Link>
-      {hasLinks && !isPast && (
+      {!isPast && (
         <CardContent className="pt-0">
-          <div className="flex gap-2 border-t pt-4">
-            {event.facebookGroupUrl && (
-              <Button
-                variant="outline"
-                size="sm"
-                asChild
-                onClick={(e) => e.stopPropagation()}
+          <div className="flex flex-wrap gap-2 border-t pt-4">
+            <Button
+              size="sm"
+              asChild
+            >
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(event.address)}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a
-                  href={event.facebookGroupUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Facebook className="h-4 w-4 mr-1.5" />
-                  Facebook
-                </a>
-              </Button>
-            )}
-            {event.telegramUrl && (
-              <Button
-                variant="outline"
-                size="sm"
-                asChild
-                onClick={(e) => e.stopPropagation()}
-              >
-                <a
-                  href={event.telegramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Send className="h-4 w-4 mr-1.5" />
-                  Telegram
-                </a>
-              </Button>
-            )}
-            {event.instagramUrl && (
-              <Button
-                variant="outline"
-                size="sm"
-                asChild
-                onClick={(e) => e.stopPropagation()}
-              >
-                <a
-                  href={event.instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Instagram className="h-4 w-4 mr-1.5" />
-                  Instagram
-                </a>
-              </Button>
+                <MapPin className="h-4 w-4 mr-1.5" />
+                Get Directions
+              </a>
+            </Button>
+            {hasSocialLinks && (
+              <>
+                {event.facebookGroupUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                  >
+                    <a
+                      href={event.facebookGroupUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Facebook className="h-4 w-4 mr-1.5" />
+                      Facebook
+                    </a>
+                  </Button>
+                )}
+                {event.telegramUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                  >
+                    <a
+                      href={event.telegramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Send className="h-4 w-4 mr-1.5" />
+                      Telegram
+                    </a>
+                  </Button>
+                )}
+                {event.instagramUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                  >
+                    <a
+                      href={event.instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Instagram className="h-4 w-4 mr-1.5" />
+                      Instagram
+                    </a>
+                  </Button>
+                )}
+              </>
             )}
           </div>
         </CardContent>

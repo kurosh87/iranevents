@@ -280,15 +280,16 @@ function EventDetailPage() {
                     </p>
                   </div>
                 </div>
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.address)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
-                >
-                  Open in Google Maps
-                  <ExternalLink className="h-3 w-3" />
-                </a>
+                <Button asChild className="w-full">
+                  <a
+                    href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(event.address)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MapPin className="mr-2 h-4 w-4" />
+                    Get Directions
+                  </a>
+                </Button>
               </CardContent>
             </Card>
 
