@@ -24,7 +24,7 @@ export function HeroSection({ title, subtitle, className, children }: HeroSectio
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
       </div>
 
-      <div className="relative container mx-auto px-4 py-24 md:py-32 lg:py-40">
+      <div className="relative container mx-auto px-4 py-32 md:py-40 lg:py-52 min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl [text-shadow:_0_4px_12px_rgb(0_0_0_/_50%),_0_2px_4px_rgb(0_0_0_/_30%)]">
             {title}
