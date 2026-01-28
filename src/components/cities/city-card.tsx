@@ -30,7 +30,7 @@ export function CityCard({ city, nextEventDate }: CityCardProps) {
 
   return (
     <Link to="/cities/$cityId" params={{ cityId: city.id }}>
-      <div className="relative aspect-[3/4] w-full rounded-2xl shadow-lg border-4 border-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] group">
+      <div className="relative aspect-[3/4] w-full rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] group">
         <img
           src={city.posterUrl}
           alt={city.name}
