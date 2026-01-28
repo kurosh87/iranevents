@@ -53,7 +53,7 @@ export function Header() {
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
             <img src="/logo.svg" alt="Iran Revolution" className="h-8 w-auto" />
-            <span className="text-xl font-bold text-primary">Iran Revolution</span>
+            <span className="text-xl font-bold text-white">Iran Revolution</span>
           </Link>
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
