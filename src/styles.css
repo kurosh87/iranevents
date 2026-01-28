@@ -6,92 +6,89 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    /* Persian-inspired palette */
-    --persian-turquoise: oklch(0.72 0.15 180);
-    --persian-turquoise-light: oklch(0.85 0.10 180);
-    --persian-turquoise-dark: oklch(0.55 0.15 180);
-    --saffron-gold: oklch(0.78 0.18 85);
-    --saffron-gold-light: oklch(0.88 0.12 85);
-    --saffron-gold-dark: oklch(0.65 0.18 85);
-    --persian-rose: oklch(0.65 0.20 350);
-    --persian-rose-light: oklch(0.80 0.15 350);
-    --persian-rose-dark: oklch(0.50 0.20 350);
-    --lapis-blue: oklch(0.45 0.20 250);
-    --lapis-blue-light: oklch(0.60 0.18 250);
-    --lapis-blue-dark: oklch(0.35 0.18 250);
+    /* Iran Flag Colors */
+    --iran-green: oklch(0.55 0.18 145);
+    --iran-green-light: oklch(0.65 0.15 145);
+    --iran-green-dark: oklch(0.45 0.18 145);
+    --iran-red: oklch(0.50 0.22 25);
+    --iran-red-light: oklch(0.60 0.18 25);
+    --iran-red-dark: oklch(0.40 0.22 25);
+    --iran-gold: oklch(0.85 0.17 95);
+    --iran-gold-light: oklch(0.92 0.12 95);
+    --iran-gold-dark: oklch(0.75 0.17 95);
 
     /* Base colors */
-    --background: oklch(0.99 0.002 85);
-    --foreground: oklch(0.15 0.02 250);
+    --background: oklch(0.99 0 0);
+    --foreground: oklch(0.15 0.01 0);
     --card: oklch(1 0 0);
-    --card-foreground: oklch(0.15 0.02 250);
+    --card-foreground: oklch(0.15 0.01 0);
     --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.15 0.02 250);
-    --primary: var(--persian-turquoise);
+    --popover-foreground: oklch(0.15 0.01 0);
+    --primary: var(--iran-green);
     --primary-foreground: oklch(0.99 0 0);
-    --secondary: oklch(0.96 0.01 85);
-    --secondary-foreground: oklch(0.20 0.02 250);
-    --muted: oklch(0.96 0.01 85);
-    --muted-foreground: oklch(0.50 0.02 250);
-    --accent: var(--saffron-gold);
-    --accent-foreground: oklch(0.15 0.02 250);
-    --destructive: var(--persian-rose);
-    --border: oklch(0.90 0.01 85);
-    --input: oklch(0.90 0.01 85);
-    --ring: var(--persian-turquoise);
+    --secondary: oklch(0.96 0 0);
+    --secondary-foreground: oklch(0.20 0.01 0);
+    --muted: oklch(0.96 0 0);
+    --muted-foreground: oklch(0.45 0.01 0);
+    --accent: var(--iran-gold);
+    --accent-foreground: oklch(0.15 0.01 0);
+    --destructive: var(--iran-red);
+    --border: oklch(0.90 0 0);
+    --input: oklch(0.90 0 0);
+    --ring: var(--iran-green);
 
-    /* Chart colors using Persian palette */
-    --chart-1: var(--persian-turquoise);
-    --chart-2: var(--saffron-gold);
-    --chart-3: var(--persian-rose);
-    --chart-4: var(--lapis-blue);
-    --chart-5: var(--persian-turquoise-dark);
+    /* Chart colors using Iran palette */
+    --chart-1: var(--iran-green);
+    --chart-2: var(--iran-gold);
+    --chart-3: var(--iran-red);
+    --chart-4: var(--iran-green-dark);
+    --chart-5: var(--iran-gold-dark);
 
     --radius: 0.625rem;
 
     /* Sidebar */
-    --sidebar: oklch(0.99 0.002 85);
-    --sidebar-foreground: oklch(0.15 0.02 250);
-    --sidebar-primary: var(--persian-turquoise);
+    --sidebar: oklch(0.99 0 0);
+    --sidebar-foreground: oklch(0.15 0.01 0);
+    --sidebar-primary: var(--iran-green);
     --sidebar-primary-foreground: oklch(0.99 0 0);
-    --sidebar-accent: oklch(0.96 0.01 85);
-    --sidebar-accent-foreground: oklch(0.20 0.02 250);
-    --sidebar-border: oklch(0.90 0.01 85);
-    --sidebar-ring: var(--persian-turquoise);
+    --sidebar-accent: oklch(0.96 0 0);
+    --sidebar-accent-foreground: oklch(0.20 0.01 0);
+    --sidebar-border: oklch(0.90 0 0);
+    --sidebar-ring: var(--iran-green);
 }
 
 .dark {
-    --background: oklch(0.12 0.02 250);
-    --foreground: oklch(0.95 0.01 85);
-    --card: oklch(0.16 0.02 250);
-    --card-foreground: oklch(0.95 0.01 85);
-    --popover: oklch(0.16 0.02 250);
-    --popover-foreground: oklch(0.95 0.01 85);
-    --primary: var(--persian-turquoise-light);
-    --primary-foreground: oklch(0.12 0.02 250);
-    --secondary: oklch(0.22 0.02 250);
-    --secondary-foreground: oklch(0.95 0.01 85);
-    --muted: oklch(0.22 0.02 250);
-    --muted-foreground: oklch(0.65 0.02 250);
-    --accent: var(--saffron-gold);
-    --accent-foreground: oklch(0.12 0.02 250);
-    --destructive: var(--persian-rose-light);
+    --background: oklch(0.12 0 0);
+    --foreground: oklch(0.95 0 0);
+    --card: oklch(0.16 0 0);
+    --card-foreground: oklch(0.95 0 0);
+    --popover: oklch(0.16 0 0);
+    --popover-foreground: oklch(0.95 0 0);
+    --primary: var(--iran-green-light);
+    --primary-foreground: oklch(0.12 0 0);
+    --secondary: oklch(0.22 0 0);
+    --secondary-foreground: oklch(0.95 0 0);
+    --muted: oklch(0.22 0 0);
+    --muted-foreground: oklch(0.60 0 0);
+    --accent: var(--iran-gold);
+    --accent-foreground: oklch(0.12 0 0);
+    --destructive: var(--iran-red-light);
     --border: oklch(1 0 0 / 12%);
     --input: oklch(1 0 0 / 15%);
-    --ring: var(--persian-turquoise-light);
-    --chart-1: var(--persian-turquoise-light);
-    --chart-2: var(--saffron-gold-light);
-    --chart-3: var(--persian-rose-light);
-    --chart-4: var(--lapis-blue-light);
-    --chart-5: var(--persian-turquoise);
-    --sidebar: oklch(0.16 0.02 250);
-    --sidebar-foreground: oklch(0.95 0.01 85);
-    --sidebar-primary: var(--persian-turquoise-light);
-    --sidebar-primary-foreground: oklch(0.12 0.02 250);
-    --sidebar-accent: oklch(0.22 0.02 250);
-    --sidebar-accent-foreground: oklch(0.95 0.01 85);
+    --ring: var(--iran-green-light);
+    --chart-1: var(--iran-green-light);
+    --chart-2: var(--iran-gold-light);
+    --chart-3: var(--iran-red-light);
+    --chart-4: var(--iran-green);
+    --chart-5: var(--iran-gold);
+    --sidebar: oklch(0.16 0 0);
+    --sidebar-foreground: oklch(0.95 0 0);
+    --sidebar-primary: var(--iran-green-light);
+    --sidebar-primary-foreground: oklch(0.12 0 0);
+    --sidebar-accent: oklch(0.22 0 0);
+    --sidebar-accent-foreground: oklch(0.95 0 0);
     --sidebar-border: oklch(1 0 0 / 12%);
-    --sidebar-ring: var(--persian-turquoise-light);
+    --sidebar-ring: var(--iran-green-light);
 }
 
 @theme inline {
@@ -99,19 +96,16 @@
     --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
     --font-farsi: 'Vazirmatn', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
 
-    /* Persian palette theme colors */
-    --color-persian-turquoise: var(--persian-turquoise);
-    --color-persian-turquoise-light: var(--persian-turquoise-light);
-    --color-persian-turquoise-dark: var(--persian-turquoise-dark);
-    --color-saffron-gold: var(--saffron-gold);
-    --color-saffron-gold-light: var(--saffron-gold-light);
-    --color-saffron-gold-dark: var(--saffron-gold-dark);
-    --color-persian-rose: var(--persian-rose);
-    --color-persian-rose-light: var(--persian-rose-light);
-    --color-persian-rose-dark: var(--persian-rose-dark);
-    --color-lapis-blue: var(--lapis-blue);
-    --color-lapis-blue-light: var(--lapis-blue-light);
-    --color-lapis-blue-dark: var(--lapis-blue-dark);
+    /* Iran Flag theme colors */
+    --color-iran-green: var(--iran-green);
+    --color-iran-green-light: var(--iran-green-light);
+    --color-iran-green-dark: var(--iran-green-dark);
+    --color-iran-red: var(--iran-red);
+    --color-iran-red-light: var(--iran-red-light);
+    --color-iran-red-dark: var(--iran-red-dark);
+    --color-iran-gold: var(--iran-gold);
+    --color-iran-gold-light: var(--iran-gold-light);
+    --color-iran-gold-dark: var(--iran-gold-dark);
 
     /* Sidebar colors */
     --color-sidebar-ring: var(--sidebar-ring);

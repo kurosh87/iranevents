@@ -10,6 +10,7 @@ import { EventStatusBadge } from '@/components/events/event-status'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+import { Button } from '@/components/ui/button'
 import {
   ArrowLeft,
   Calendar,
@@ -18,6 +19,10 @@ import {
   Image as ImageIcon,
   MessageSquare,
   ExternalLink,
+  Facebook,
+  Instagram,
+  Send,
+  Ticket,
 } from 'lucide-react'
 import type { EventImage, ChatMessage } from '@/types'
 
@@ -206,6 +211,56 @@ function EventDetailPage() {
           </div>
 
           <aside className="space-y-6">
+            {(event.rsvpUrl || event.facebookGroupUrl || event.eventUrl || event.instagramUrl || event.telegramUrl) && (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-base">Join This Event</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  {event.rsvpUrl && (
+                    <Button asChild className="w-full">
+                      <a href={event.rsvpUrl} target="_blank" rel="noopener noreferrer">
+                        <Ticket className="mr-2 h-4 w-4" />
+                        RSVP Now
+                      </a>
+                    </Button>
+                  )}
+                  {event.facebookGroupUrl && (
+                    <Button variant="outline" asChild className="w-full">
+                      <a href={event.facebookGroupUrl} target="_blank" rel="noopener noreferrer">
+                        <Facebook className="mr-2 h-4 w-4" />
+                        Facebook Group
+                      </a>
+                    </Button>
+                  )}
+                  {event.eventUrl && (
+                    <Button variant="outline" asChild className="w-full">
+                      <a href={event.eventUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Event Page
+                      </a>
+                    </Button>
+                  )}
+                  <div className="flex gap-2">
+                    {event.instagramUrl && (
+                      <Button variant="ghost" size="icon" asChild className="flex-1">
+                        <a href={event.instagramUrl} target="_blank" rel="noopener noreferrer" title="Instagram">
+                          <Instagram className="h-5 w-5" />
+                        </a>
+                      </Button>
+                    )}
+                    {event.telegramUrl && (
+                      <Button variant="ghost" size="icon" asChild className="flex-1">
+                        <a href={event.telegramUrl} target="_blank" rel="noopener noreferrer" title="Telegram">
+                          <Send className="h-5 w-5" />
+                        </a>
+                      </Button>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             <Card>
               <CardHeader>
                 <CardTitle className="text-base">Location</CardTitle>

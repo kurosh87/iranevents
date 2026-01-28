@@ -11,7 +11,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { MapPin, Calendar, Clock, ArrowLeft, History } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { MapPin, Calendar, Clock, ArrowLeft, History, Facebook, Send, Instagram } from 'lucide-react'
 
 export const Route = createFileRoute('/cities/$cityId/')({
   component: CityDetailPage,

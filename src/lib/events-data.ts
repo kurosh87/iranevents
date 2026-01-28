@@ -14,6 +14,11 @@ export interface RallyEvent {
   organizer?: string
   posterImage: string
   status: EventStatus
+  eventUrl?: string
+  facebookGroupUrl?: string
+  rsvpUrl?: string
+  instagramUrl?: string
+  telegramUrl?: string
 }
 
 export const events: RallyEvent[] = [
@@ -31,6 +36,8 @@ export const events: RallyEvent[] = [
     theme: 'Iranian Revolution',
     posterImage: '/posters/Berlin.jpeg',
     status: 'upcoming',
+    facebookGroupUrl: 'https://facebook.com/groups/iranberlin',
+    telegramUrl: 'https://t.me/iranberlin',
   },
   {
     id: 'stockholm-jan-31',
@@ -348,6 +355,8 @@ export const events: RallyEvent[] = [
     organizer: '@royal_army_nyc',
     posterImage: '/posters/NYC.jpeg',
     status: 'upcoming',
+    facebookGroupUrl: 'https://facebook.com/groups/irannyc',
+    instagramUrl: 'https://instagram.com/royal_army_nyc',
   },
   {
     id: 'sf-jan-31',
@@ -550,6 +559,8 @@ export const events: RallyEvent[] = [
     coordinates: { lat: 43.6561, lng: -79.3802 },
     posterImage: '/posters/Toronto.jpeg',
     status: 'upcoming',
+    facebookGroupUrl: 'https://facebook.com/groups/irantoronto',
+    telegramUrl: 'https://t.me/irantoronto',
   },
   {
     id: 'montreal-jan-31',
