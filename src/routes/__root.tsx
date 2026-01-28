@@ -26,15 +26,23 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Iran Events - Diaspora Meetups Worldwide',
+        title: 'Iran Revolution - Protests Worldwide',
       },
       {
         name: 'description',
         content:
-          'Weekly Iranian diaspora meetups in cities around the world. Join local events, connect with the community.',
+          'Join protests worldwide in solidarity with Iran. Find events in 40+ cities standing with the people of Iran.',
       },
     ],
     links: [
+      {
+        rel: 'icon',
+        href: '/favicon.ico',
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: '/apple-touch-icon.png',
+      },
       {
         rel: 'stylesheet',
         href: appCss,
