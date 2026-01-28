@@ -7,7 +7,7 @@ import {
 } from '@clerk/tanstack-react-start'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/layout/theme-toggle'
-import { Megaphone, Info, Menu, X } from 'lucide-react'
+import { Megaphone, Info, Menu, X, Plus } from 'lucide-react'
 import { useState } from 'react'
 
 const clerkEnabled = !!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -41,6 +41,7 @@ function AuthSection() {
 
 const navItems = [
   { to: '/', label: 'Protests', icon: Megaphone },
+  { to: '/submit-event', label: 'Submit Event', icon: Plus },
   { to: '/about', label: 'About', icon: Info },
 ]
 

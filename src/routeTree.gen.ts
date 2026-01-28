@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SubmitEventRouteImport } from './routes/submit-event'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as NewsIndexRouteImport } from './routes/news/index'
@@ -20,6 +21,11 @@ import { Route as ArticlesSlugRouteImport } from './routes/articles/$slug'
 import { Route as CitiesCityIdIndexRouteImport } from './routes/cities/$cityId/index'
 import { Route as CitiesCityIdEventsEventIdRouteImport } from './routes/cities/$cityId/events/$eventId'
 
+const SubmitEventRoute = SubmitEventRouteImport.update({
+  id: '/submit-event',
+  path: '/submit-event',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -75,6 +81,7 @@ const CitiesCityIdEventsEventIdRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/submit-event': typeof SubmitEventRoute
   '/articles/$slug': typeof ArticlesSlugRoute
   '/news/$slug': typeof NewsSlugRoute
   '/articles/': typeof ArticlesIndexRoute
@@ -87,6 +94,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/submit-event': typeof SubmitEventRoute
   '/articles/$slug': typeof ArticlesSlugRoute
   '/news/$slug': typeof NewsSlugRoute
   '/articles': typeof ArticlesIndexRoute
@@ -100,6 +108,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/submit-event': typeof SubmitEventRoute
   '/articles/$slug': typeof ArticlesSlugRoute
   '/news/$slug': typeof NewsSlugRoute
   '/articles/': typeof ArticlesIndexRoute
@@ -114,6 +123,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/submit-event'
     | '/articles/$slug'
     | '/news/$slug'
     | '/articles/'
@@ -126,6 +136,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/submit-event'
     | '/articles/$slug'
     | '/news/$slug'
     | '/articles'
@@ -138,6 +149,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/submit-event'
     | '/articles/$slug'
     | '/news/$slug'
     | '/articles/'
@@ -151,6 +163,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  SubmitEventRoute: typeof SubmitEventRoute
   ArticlesSlugRoute: typeof ArticlesSlugRoute
   NewsSlugRoute: typeof NewsSlugRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
@@ -163,6 +176,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/submit-event': {
+      id: '/submit-event'
+      path: '/submit-event'
+      fullPath: '/submit-event'
+      preLoaderRoute: typeof SubmitEventRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -239,6 +259,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  SubmitEventRoute: SubmitEventRoute,
   ArticlesSlugRoute: ArticlesSlugRoute,
   NewsSlugRoute: NewsSlugRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,

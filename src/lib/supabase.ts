@@ -74,6 +74,33 @@ export type Database = {
         >
         Update: Partial<Database['public']['Tables']['chat_messages']['Row']>
       }
+      event_submissions: {
+        Row: {
+          id: string
+          city_id: string
+          title: string
+          date: string
+          start_time: string
+          end_time: string | null
+          venue: string
+          address: string
+          description: string | null
+          organizer_name: string
+          organizer_email: string
+          facebook_url: string | null
+          telegram_url: string | null
+          instagram_url: string | null
+          poster_url: string | null
+          user_id: string | null
+          status: 'pending' | 'approved' | 'rejected'
+          created_at: string
+        }
+        Insert: Omit<
+          Database['public']['Tables']['event_submissions']['Row'],
+          'id' | 'created_at'
+        >
+        Update: Partial<Database['public']['Tables']['event_submissions']['Row']>
+      }
     }
   }
 }
