@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { getCityById, regionLabels } from '@/lib/cities-data'
-import { getEventsByCityId } from '@/lib/events-data'
+import { getEventsByCityId, type RallyEvent } from '@/lib/events-data'
 import { PageContainer } from '@/components/layout/page-container'
 import { CityMap } from '@/components/map/city-map'
 import { Badge } from '@/components/ui/badge'
@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { MapPin, Calendar, Clock, ArrowLeft } from 'lucide-react'
+import { MapPin, Calendar, Clock, ArrowLeft, History } from 'lucide-react'
 
 export const Route = createFileRoute('/cities/$cityId/')({
   component: CityDetailPage,
@@ -21,16 +21,26 @@ export const Route = createFileRoute('/cities/$cityId/')({
       throw notFound()
     }
     const cityEvents = getEventsByCityId(params.cityId)
-    return { city, cityEvents }
+    const now = new Date()
+
+    const upcomingEvents = cityEvents
+      .filter((event) => new Date(event.date) >= now)
+      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+
+    const pastEvents = cityEvents
+      .filter((event) => new Date(event.date) < now)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
+    return { city, upcomingEvents, pastEvents }
   },
 })
 
 function CityDetailPage() {
-  const { city, cityEvents } = Route.useLoaderData()
+  const { city, upcomingEvents, pastEvents } = Route.useLoaderData()
 
   const posterUrl =
     city.posterUrl ??
-    `https://source.unsplash.com/1200x400/?${encodeURIComponent(city.name + ' city skyline')}`
+    `https://picsum.photos/seed/${encodeURIComponent(city.id)}/1200/400`
 
   return (
     <div>
@@ -65,80 +75,42 @@ function CityDetailPage() {
         <div className="grid gap-8 lg:grid-cols-3">
           <div className="lg:col-span-2 space-y-8">
             <section>
-              <h2 className="mb-4 text-2xl font-semibold">Upcoming Events</h2>
-              {cityEvents.length === 0 ? (
+              <h2 className="mb-4 text-2xl font-semibold flex items-center gap-2">
+                <Calendar className="h-6 w-6" />
+                Upcoming Events
+              </h2>
+              {upcomingEvents.length === 0 ? (
                 <Card>
                   <CardContent className="flex flex-col items-center justify-center py-12 text-center">
                     <Calendar className="h-12 w-12 text-muted-foreground" />
                     <p className="mt-4 text-lg font-medium">No upcoming events</p>
                     <p className="text-muted-foreground">
-                      Check back soon for new events.
+                      Check back soon for new events in {city.name}.
                     </p>
                   </CardContent>
                 </Card>
               ) : (
                 <div className="space-y-4">
-                  {cityEvents.map((event) => (
-                    <Link
-                      key={event.id}
-                      to="/cities/$cityId/events/$eventId"
-                      params={{ cityId: city.id, eventId: event.id }}
-                    >
-                      <Card className="transition-all hover:shadow-md hover:ring-1 hover:ring-primary/20">
-                        <CardHeader>
-                          <div className="flex items-start justify-between">
-                            <div>
-                              <CardTitle>{event.title}</CardTitle>
-                              <CardDescription className="mt-1">
-                                {event.venue}
-                              </CardDescription>
-                            </div>
-                            <Badge
-                              variant={
-                                event.status === 'upcoming'
-                                  ? 'default'
-                                  : 'secondary'
-                              }
-                            >
-                              {event.status}
-                            </Badge>
-                          </div>
-                        </CardHeader>
-                        <CardContent>
-                          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-1.5">
-                              <Calendar className="h-4 w-4" />
-                              <span>
-                                {new Date(event.date).toLocaleDateString(
-                                  'en-US',
-                                  {
-                                    weekday: 'long',
-                                    year: 'numeric',
-                                    month: 'long',
-                                    day: 'numeric',
-                                  }
-                                )}
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-1.5">
-                              <Clock className="h-4 w-4" />
-                              <span>
-                                {event.startTime}
-                                {event.endTime && ` - ${event.endTime}`}
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-1.5">
-                              <MapPin className="h-4 w-4" />
-                              <span>{event.address}</span>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
+                  {upcomingEvents.map((event) => (
+                    <EventCard key={event.id} event={event} cityId={city.id} />
                   ))}
                 </div>
               )}
             </section>
+
+            {pastEvents.length > 0 && (
+              <section>
+                <h2 className="mb-4 text-2xl font-semibold flex items-center gap-2 text-muted-foreground">
+                  <History className="h-6 w-6" />
+                  Past Events
+                </h2>
+                <div className="space-y-4 opacity-75">
+                  {pastEvents.map((event) => (
+                    <EventCard key={event.id} event={event} cityId={city.id} isPast />
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
 
           <aside className="space-y-6">
@@ -197,5 +169,62 @@ function CityDetailPage() {
         </div>
       </PageContainer>
     </div>
+  )
+}
+
+interface EventCardProps {
+  event: RallyEvent
+  cityId: string
+  isPast?: boolean
+}
+
+function EventCard({ event, cityId, isPast }: EventCardProps) {
+  return (
+    <Link
+      to="/cities/$cityId/events/$eventId"
+      params={{ cityId, eventId: event.id }}
+    >
+      <Card className="transition-all hover:shadow-md hover:ring-1 hover:ring-primary/20">
+        <CardHeader>
+          <div className="flex items-start justify-between">
+            <div>
+              <CardTitle>{event.title}</CardTitle>
+              <CardDescription className="mt-1">
+                {event.venue}
+              </CardDescription>
+            </div>
+            <Badge variant={isPast ? 'outline' : 'default'}>
+              {isPast ? 'past' : 'upcoming'}
+            </Badge>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-1.5">
+              <Calendar className="h-4 w-4" />
+              <span>
+                {new Date(event.date).toLocaleDateString('en-US', {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Clock className="h-4 w-4" />
+              <span>
+                {event.startTime}
+                {event.endTime && ` - ${event.endTime}`}
+              </span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <MapPin className="h-4 w-4" />
+              <span>{event.address}</span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
   )
 }
