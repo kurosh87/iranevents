@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   SignInButton,
   SignedIn,
@@ -116,11 +116,17 @@ function SignInPrompt() {
 
 function EventSubmissionForm() {
   const { user } = useUser()
-  const [formData, setFormData] = useState<FormData>({
-    ...initialFormData,
-    organizerEmail: user?.primaryEmailAddress?.emailAddress || '',
-    organizerName: user?.fullName || '',
-  })
+  const [formData, setFormData] = useState<FormData>(initialFormData)
+
+  useEffect(() => {
+    if (user) {
+      setFormData(prev => ({
+        ...prev,
+        organizerEmail: user.primaryEmailAddress?.emailAddress || prev.organizerEmail,
+        organizerName: user.fullName || prev.organizerName,
+      }))
+    }
+  }, [user])
   const [posterFile, setPosterFile] = useState<File | null>(null)
   const [posterPreview, setPosterPreview] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)

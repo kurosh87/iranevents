@@ -6,7 +6,6 @@ import {
   UserButton,
 } from '@clerk/tanstack-react-start'
 import { Button } from '@/components/ui/button'
-import { ThemeToggle } from '@/components/layout/theme-toggle'
 import { Megaphone, Info, Menu, X, Plus } from 'lucide-react'
 import { useState } from 'react'
 
@@ -70,7 +69,6 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-2">
-          <ThemeToggle />
           <AuthSection />
           <Button
             variant="ghost"
